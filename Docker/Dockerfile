@@ -4,7 +4,8 @@ FROM php:7.4-apache
 #Actualizacion e instalacion de dependencias 
 RUN apt-get update && \
     apt-get install -y \
-    mariadb-client
+    mariadb-client \
+    && docker-php-ext-install mysqli
 
 #Copia de archivos de nuestra aplicación web al directorio de trabajo del contenedor
 COPY ./AppTask /var/www/html
