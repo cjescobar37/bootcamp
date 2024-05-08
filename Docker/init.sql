@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS tasks (
 INSERT INTO tasks (task_name) VALUES
 ('Tarea 1'),
 ('Tarea 2'),
-('Tarea 3');
+('Tarea 4');
