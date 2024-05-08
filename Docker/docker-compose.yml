@@ -1,0 +1,21 @@
+# Defino 2 servicios: uno para nuestra aplicación web (web) y otro para la base de datos MySQL (db). 
+# Utilizo mysql version: 5.7
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./AppTask:/var/www/html
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: task
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
