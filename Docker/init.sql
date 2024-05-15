@@ -1,4 +1,4 @@
--- Crear la tabla tasks si no existe
+-- Crear la tabla tasks con 3 ejemplos:
 CREATE TABLE IF NOT EXISTS tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
     task_name VARCHAR(255) NOT NULL
